@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public static GameObject currentPlatform;
     bool canTurn = false;
 
-    public static AudioSource[] sfx;
+    //public static AudioSource[] sfx;
 
     public GameObject Magic;
     public Transform MagicStartPosition;
@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public Text highScore;
 
     bool falling = false;
+
+    public float JumpForce;
 
     void StopJump()
     {
@@ -47,25 +49,25 @@ public class PlayerController : MonoBehaviour
         Invoke("KillMagic", 1);
     }
 
-    void PlayMagicSound()
-    {
-        sfx[7].Play();
-    }
+    //void PlayMagicSound()
+    //{
+    //    sfx[7].Play();
+    //}
 
     void KillMagic()
     {
         Magic.SetActive(false);
     }
 
-    void Footstep1()
-    {
-        sfx[4].Play();
-    }
+    //void Footstep1()
+    //{
+    //    sfx[4].Play();
+    //}
 
-    void Footstep2()
-    {
-        sfx[3].Play();
-    }
+    //void Footstep2()
+    //{
+    //    sfx[3].Play();
+    //}
 
 
     void RestartGame()
@@ -80,14 +82,14 @@ public class PlayerController : MonoBehaviour
 
             if (falling)
             {
-                anim.SetTrigger("isFalling");
+                anim.SetTrigger("IsFalling");
             }
             else
             {
                 anim.SetTrigger("IsDead");
             }
             isDead = true;
-            sfx[6].Play();
+            //sfx[6].Play();
             livesLeft--;
             PlayerPrefs.SetInt("Lives", livesLeft);
 
@@ -153,7 +155,7 @@ public class PlayerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         MagicRB = Magic.GetComponent<Rigidbody>();
 
-        sfx = GameObject.FindWithTag("GameData").GetComponentsInChildren<AudioSource>();
+        //sfx = GameObject.FindWithTag("GameData").GetComponentsInChildren<AudioSource>();
 
         startPosition = player.transform.position;
         GenerateWorld.RunDummy();
@@ -197,8 +199,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("IsJumping", true);
-            rb.AddForce(Vector3.up * 300);
-            sfx[2].Play();
+            rb.AddForce(Vector3.up * JumpForce);
+            //sfx[2].Play();
         }
         else if (Input.GetKeyDown(KeyCode.M))
         {

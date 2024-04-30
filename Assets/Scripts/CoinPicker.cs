@@ -20,7 +20,7 @@ public class CoinPicker : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             GameData.singleton.UpdateScore(10);
-            PlayerController.sfx[1].Play();
+            //PlayerController.sfx[1].Play();
             GameObject scoreText = Instantiate(scorePrefab);
             //scoreText.transform.parent = canvas.transform;
             scoreText.transform.SetParent(canvas.transform);

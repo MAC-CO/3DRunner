@@ -35,7 +35,7 @@ public class DestroyWall : MonoBehaviour
             {
                 r.isKinematic = false;
             }
-            PlayerController.sfx[5].Play();
+            //PlayerController.sfx[5].Play();
         }
     }
 
