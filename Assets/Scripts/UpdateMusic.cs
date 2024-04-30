@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class UpdateMusic : MonoBehaviour
 {
-    List<AudioSource> music = new List<AudioSource>();
+    //List<AudioSource> music = new List<AudioSource>();
 
     public void Start()
     {
-        AudioSource[] allAS = GameObject.FindWithTag("GameData").GetComponentsInChildren<AudioSource>();
-        music.Add(allAS[0]);
+        //AudioSource[] allAS = GameObject.FindWithTag("GameData").GetComponentsInChildren<AudioSource>();
+        //music.Add(allAS[0]);
 
 
         Slider musicSlider = this.GetComponent<Slider>();
@@ -30,9 +30,9 @@ public class UpdateMusic : MonoBehaviour
     public void UpdateMusicVolume(float value)
     {
         PlayerPrefs.SetFloat("musicvolume", value);
-        foreach (AudioSource m in music)
-        {
-            m.volume = value;
-        }
+        //foreach (AudioSource m in music)
+        //{
+        //    m.volume = value;
+        //}
     }
 }

@@ -49,25 +49,25 @@ public class PlayerController : MonoBehaviour
         Invoke("KillMagic", 1);
     }
 
-    //void PlayMagicSound()
-    //{
+    void PlayMagicSound()
+    {
     //    sfx[7].Play();
-    //}
+    }
 
     void KillMagic()
     {
         Magic.SetActive(false);
     }
 
-    //void Footstep1()
-    //{
-    //    sfx[4].Play();
-    //}
+    void Footstep1()
+    {
+        //sfx[4].Play();
+    }
 
-    //void Footstep2()
-    //{
-    //    sfx[3].Play();
-    //}
+    void footstep2()
+    {
+        //sfx[3].play();
+    }
 
 
     void RestartGame()
