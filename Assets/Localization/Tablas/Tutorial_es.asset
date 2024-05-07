@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tutorial_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 671226a5c086939439916fe0a145c6b9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9976832000
+    m_Localized: "Usa las flechas de izquierda y derecha para girar en la secci\xF3n
+      T"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14368268288
+    m_Localized: Usa la barra espaciadora para saltar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17690157056
+    m_Localized: Usa la A y D para moverse horizontalmente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279716716544
+    m_Localized: Usa la M para invocar la magia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1999989530624
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1984655155200
+    m_Localized: Ayuda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1950261862400
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1920612327424
+    m_Localized: Estadisticas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1769369919488
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2267531599872
+    m_Localized: Ultimo Puntaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2302386266112
+    m_Localized: Puntaje Alto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2436968898560
+    m_Localized: Volumen del sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2485157257216
+    m_Localized: Volumen de la musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8158242824192
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

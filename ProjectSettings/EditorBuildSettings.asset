@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScrollingWorld.unity
     guid: 320f36e8abdaa472786040837e4445a3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 8a4faae5a32fd524a800ef662d1f1289, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 42cbad4204fa59047b34b5eb0bf810dd, type: 2}
