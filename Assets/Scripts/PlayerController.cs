@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     public float JumpForce;
 
+    public Parametro Parametro;
+
     void StopJump()
     {
         anim.SetBool("IsJumping", false);
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
     void PlayMagicSound()
     {
     //    sfx[7].Play();
+        Parametro.SonidoFireBall();
     }
 
     void KillMagic()
@@ -59,15 +62,15 @@ public class PlayerController : MonoBehaviour
         Magic.SetActive(false);
     }
 
-    void Footstep1()
-    {
-        //sfx[4].Play();
-    }
-
-    void footstep2()
-    {
-        //sfx[3].play();
-    }
+    // void Footstep1()
+    // {
+    //     //sfx[4].Play();
+    // }
+    //
+    // void Footstep2()
+    // {
+    //     //sfx[3].play();
+    // }
 
 
     void RestartGame()
@@ -200,7 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("IsJumping", true);
             rb.AddForce(Vector3.up * JumpForce);
-            //sfx[2].Play();
+            Parametro.SonidoJump();
         }
         else if (Input.GetKeyDown(KeyCode.M))
         {

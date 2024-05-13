@@ -8,11 +8,21 @@ public class CoinPicker : MonoBehaviour
     public GameObject scorePrefab;
     public GameObject ParticlePrefab;
     GameObject canvas;
+    
+    private FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
 
     void Start()
     {
+        
         Mesh = this.GetComponentsInChildren<MeshRenderer>();
         canvas = GameObject.Find("Canvas");
+    }
+    
+    public static void SonidoCoin()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/CoinPicker");
+        Debug.Log("Moenda");
     }
 
     private void OnTriggerEnter(Collider col)
@@ -20,7 +30,9 @@ public class CoinPicker : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             GameData.singleton.UpdateScore(10);
-            //PlayerController.sfx[1].Play();
+
+            SonidoCoin();
+            
             GameObject scoreText = Instantiate(scorePrefab);
             //scoreText.transform.parent = canvas.transform;
             scoreText.transform.SetParent(canvas.transform);

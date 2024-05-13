@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -679,6 +679,10 @@ PrefabInstance:
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1320909648, guid: dd6c6fc869c7e45cc8c988eb74c6eaaa, type: 3}
+      propertyPath: Parametro
+      value: 
+      objectReference: {fileID: 852571182}
+    - target: {fileID: 1320909648, guid: dd6c6fc869c7e45cc8c988eb74c6eaaa, type: 3}
       propertyPath: highScore
       value: 
       objectReference: {fileID: 1754828765}
@@ -1029,6 +1033,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 345566784467578564, guid: dd6c6fc869c7e45cc8c988eb74c6eaaa, type: 3}
   m_PrefabInstance: {fileID: 507993411}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &507993413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 345566784467415734, guid: dd6c6fc869c7e45cc8c988eb74c6eaaa, type: 3}
+  m_PrefabInstance: {fileID: 507993411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &540063382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1276,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 345566784467578582, guid: dd6c6fc869c7e45cc8c988eb74c6eaaa, type: 3}
   m_PrefabInstance: {fileID: 507993411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &852571182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507993413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e73a65369334443959f33676a81cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 1257786933
+      Data2: 1121835437
+      Data3: -702984558
+      Data4: -1514716490
+    Path: event:/GameMusic
+--- !u!114 &852571187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507993413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b718d81b835264d977c1c59e69e730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &868267465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,8 +1394,8 @@ GameObject:
   m_Component:
   - component: {fileID: 872338149}
   - component: {fileID: 872338148}
-  - component: {fileID: 872338147}
   - component: {fileID: 872338150}
+  - component: {fileID: 872338151}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1363,14 +1403,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &872338147
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872338146}
-  m_Enabled: 1
 --- !u!20 &872338148
 Camera:
   m_ObjectHideFlags: 0
@@ -1442,6 +1474,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 852571181}
+--- !u!114 &872338151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872338146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &884198649
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4913316554632332717}
   - component: {fileID: 4913316554631562667}
   - component: {fileID: 4913316554630563691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4913316554632332747}
   m_RootOrder: 0
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,7 +97,7 @@ GameObject:
   - component: {fileID: 1236613435334344067}
   - component: {fileID: 3701221794299531052}
   - component: {fileID: -7492489581845323063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stairsUp
   m_TagString: StairsUp
   m_Icon: {fileID: 0}
@@ -112,6 +114,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 130.88818, y: 105.23039, z: 15.7957115}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4913316554632332717}
   - {fileID: 4913316553271591107}
@@ -121,7 +124,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4913316554625444459
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,10 +137,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!64 &7083087067021523223
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -199,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
       propertyPath: m_Name
       value: stairsUpRail
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
       propertyPath: m_RootOrder
@@ -265,6 +274,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
       propertyPath: m_Name
       value: stairsUpRail (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd66a9720e04e4694ad459f56ec79ddd, type: 3}
       propertyPath: m_RootOrder

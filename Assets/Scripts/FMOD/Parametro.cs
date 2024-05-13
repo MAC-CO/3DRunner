@@ -23,12 +23,13 @@ public class Parametro : MonoBehaviour
 
     public void SonidoFireBall()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Ataque");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/FireBall");
     }
 
     public void SonidoJump()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Salto");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
         Debug.Log("Salto");
     }
+    
 }

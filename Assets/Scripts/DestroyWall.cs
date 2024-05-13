@@ -12,6 +12,15 @@ public class DestroyWall : MonoBehaviour
     public GameObject Explosion;
 
     Collider Col;
+    
+    private FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
+    
+    public void SonidoExplosion()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Explosion");
+        Debug.Log("Explosion");
+    }
 
     private void Awake()
     {
@@ -35,6 +44,8 @@ public class DestroyWall : MonoBehaviour
             {
                 r.isKinematic = false;
             }
+            
+            SonidoExplosion();
             //PlayerController.sfx[5].Play();
         }
     }
