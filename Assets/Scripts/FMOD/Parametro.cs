@@ -7,18 +7,15 @@ public class Parametro : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     public FMODUnity.EventReference fmodEvent;
 
-    //Parametros para la musica?
-
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         instance.start();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //instance.setParameterByName("OnEQ", EQ); // Update EQ every frame
     }
 
     public void SonidoFireBall()
@@ -30,6 +27,11 @@ public class Parametro : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
         Debug.Log("Salto");
+    }
+
+    public void Death()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Death");
     }
     
 }

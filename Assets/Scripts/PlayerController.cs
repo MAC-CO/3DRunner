@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
             }
             isDead = true;
             //sfx[6].Play();
+            Parametro.Death();
             livesLeft--;
             PlayerPrefs.SetInt("Lives", livesLeft);
 
