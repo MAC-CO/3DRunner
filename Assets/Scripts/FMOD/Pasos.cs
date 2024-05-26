@@ -1,5 +1,7 @@
 //using System.Collections;
 //using System.Collections.Generic;
+
+using System;
 using UnityEngine;
 
 public class Pasos : MonoBehaviour
@@ -9,6 +11,8 @@ public class Pasos : MonoBehaviour
     //[SerializeField]
     private TERRENO terreno;
     private FMOD.Studio.EventInstance pasos;
+    
+    [SerializeField, Range(0f, 1f)] private float Reverb;
 
     void Update()
     {
@@ -38,6 +42,7 @@ public class Pasos : MonoBehaviour
     {
         pasos = FMODUnity.RuntimeManager.CreateInstance("event:/Pasos");
         pasos.setParameterByName("Planetas", terreno);
+        pasos.setParameterByName("Reverb", Reverb);
         pasos.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         pasos.start();
         pasos.release();
@@ -55,6 +60,24 @@ public class Pasos : MonoBehaviour
                 ReproducirPasos(1);
                 Debug.Log("Marte");
                 break;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ReverbCueva"))
+        {
+            print("Reverb Entrada");
+            Reverb = 1f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ReverbCueva"))
+        {
+            print("Reverb Salida");
+            Reverb = 0f;
         }
     }
 

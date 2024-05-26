@@ -12,9 +12,10 @@ public class ParametoWalkieTalkie : MonoBehaviour
 
     private float intensity = 10f; // Light intensity
     private float EQ = 1f; // Ecualizador
+    [SerializeField, Range(0f, 1f)] private float Reverb;
 
     private float timer = 0f;
-    private float changeInterval = 3f; // Intervalo de cambio de intensidad en segundos
+    private float changeInterval = 2f; // Intervalo de cambio de intensidad en segundos
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class ParametoWalkieTalkie : MonoBehaviour
 
     void Update()
     {
+        instance.setParameterByName("Reverb", Reverb);
         // Actualizar el temporizador
         timer += Time.deltaTime;
 
@@ -52,6 +54,24 @@ public class ParametoWalkieTalkie : MonoBehaviour
 
             // Reiniciar el temporizador
             timer = 0f;
+        }
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ReverbCueva"))
+        {
+            print("Reverb Entrada");
+            Reverb = 1f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ReverbCueva"))
+        {
+            print("Reverb Salida");
+            Reverb = 0f;
         }
     }
     

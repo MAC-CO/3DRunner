@@ -8,4 +8,9 @@ public class ParametroButton : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/ClickButton");
     }
+
+    public void SonidoAgradecimientos()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Reiteracion");
+    }
 }
