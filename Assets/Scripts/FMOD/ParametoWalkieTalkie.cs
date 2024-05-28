@@ -10,7 +10,7 @@ public class ParametoWalkieTalkie : MonoBehaviour
 
     [SerializeField] private Light light; // Replace with your light component
 
-    private float intensity = 10f; // Light intensity
+    private float intensity = 3f; // Light intensity
     private float EQ = 1f; // Ecualizador
     [SerializeField, Range(0f, 1f)] private float Reverb;
 
@@ -38,14 +38,14 @@ public class ParametoWalkieTalkie : MonoBehaviour
         if (timer >= changeInterval)
         {
             // Cambiar entre 10 y 0.5 de intensidad y 1 y 0.3 de EQ
-            if (light.intensity == 10f)
+            if (light.intensity == 3f)
             {
                 light.intensity = 0.5f; // Establecer la intensidad a un valor más bajo
                 EQ = 0.5f; // Establecer EQ a un valor más bajo (ejemplo)
             }
             else
             {
-                light.intensity = 10f; // Establecer la intensidad de nuevo a 10
+                light.intensity = 3f; // Establecer la intensidad de nuevo a 10
                 EQ = 1f; // Establecer EQ a un valor más alto (ejemplo)
             }
 
